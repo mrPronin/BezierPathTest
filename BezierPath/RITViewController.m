@@ -79,32 +79,38 @@
             self.canvas.selectedPathIndex = touchedPathIndex;
             [self.canvas setNeedsDisplay];
         }
-        
     }
-    NSLog(@"Bezire path: %@", path);
+    //NSLog(@"Bezire path: %@", path);
 }
 
 #pragma mark - Actions
 
 - (IBAction)actionButton:(UIButton *)sender {
     
+    /*
     self.canvas.selectedPathIndex = sender.tag;
     [self.canvas setNeedsDisplay];
+    */
 }
 
 - (IBAction)actionTransform:(UIButton *)sender {
     
+    /*
     CGAffineTransform translation = CGAffineTransformMakeTranslation(50, 50);
     [self.canvas.path applyTransform:translation];
     [self.canvas setNeedsDisplay];
+    */
 }
 
 - (IBAction)actionScale:(UIButton *)sender {
     
+    /*
     CGAffineTransform translation = CGAffineTransformMakeScale(0.5f, 0.5f);
     [self.canvas.path applyTransform:translation];
     [self.canvas setNeedsDisplay];
+    */
 }
+
 @end
 
 /*

@@ -58,31 +58,31 @@
 
 - (void) setSelectedPathIndex:(NSInteger)selectedPathIndex {
     
-    //NSLog(@"Subviews: %@", self.subviews);
-    
     // remove previous view if needed
+    // and set iVar
     if ([self.subviews count] > 0) {
         
         [self.subviews[0] removeFromSuperview];
     }
-    
     _selectedPathIndex = selectedPathIndex;
     
     // draw selected path
+    CGFloat shadowHeight, shadowWidth = 10.f;
+    CGFloat shadowBlur = 12.f;
     UIBezierPath *path = self.pathsArray[selectedPathIndex];
-    UIGraphicsBeginImageContext(self.frame.size);
+    UIGraphicsBeginImageContext(self.bounds.size);
     
-    // add shadow
+    // stroke path and shadow to context
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextAddPath(context, path.CGPath);
-    CGContextSetLineWidth(context, 2.0);
+    CGContextSetLineWidth(context, path.lineWidth);
     CGContextSetBlendMode(context, kCGBlendModeNormal);
-    CGContextSetShadowWithColor(context, CGSizeMake(10, 10), 12.f, [UIColor blackColor].CGColor);
+    CGContextSetShadowWithColor(context, CGSizeMake(shadowWidth, shadowHeight), shadowBlur, [UIColor blackColor].CGColor);
     CGContextStrokePath(context);
     
-    UIImageView *pathView = [[UIImageView alloc] initWithFrame:self.bounds];
+    // transfer path and shadow to the image view
+    UIImageView *pathView = [[UIImageView alloc] initWithFrame: self.bounds];
     pathView.backgroundColor = [UIColor clearColor];
-    
     pathView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

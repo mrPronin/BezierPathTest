@@ -10,7 +10,7 @@
 
 @interface RITBezierPathView : UIView
 
-@property (strong, nonatomic) UIBezierPath *path;
+//@property (strong, nonatomic) UIBezierPath *path;
 @property (strong, nonatomic) NSArray *pathsArray;
 @property (assign, nonatomic) NSInteger selectedPathIndex;
 
