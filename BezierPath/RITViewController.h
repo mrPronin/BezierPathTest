@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RITBezierPathView.h"
 
 @interface RITViewController : UIViewController
+
+@property (strong, nonatomic) RITBezierPathView *canvas;
+
+- (IBAction)actionButton:(UIButton *)sender;
+- (IBAction)actionTransform:(UIButton *)sender;
+- (IBAction)actionScale:(UIButton *)sender;
 
 @end

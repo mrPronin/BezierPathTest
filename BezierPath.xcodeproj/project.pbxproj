@@ -21,6 +21,7 @@
 		A27B102B191A9C5A00B6966D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27B100D191A9C5A00B6966D /* UIKit.framework */; };
 		A27B1033191A9C5A00B6966D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A27B1031191A9C5A00B6966D /* InfoPlist.strings */; };
 		A27B1035191A9C5A00B6966D /* BezierPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B1034191A9C5A00B6966D /* BezierPathTests.m */; };
+		A27B1040191A9CA200B6966D /* RITBezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B103F191A9CA200B6966D /* RITBezierPathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A27B1030191A9C5A00B6966D /* BezierPathTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BezierPathTests-Info.plist"; sourceTree = "<group>"; };
 		A27B1032191A9C5A00B6966D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A27B1034191A9C5A00B6966D /* BezierPathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathTests.m; sourceTree = "<group>"; };
+		A27B103E191A9CA200B6966D /* RITBezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RITBezierPathView.h; path = ../RITBezierPathView.h; sourceTree = "<group>"; };
+		A27B103F191A9CA200B6966D /* RITBezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RITBezierPathView.m; path = ../RITBezierPathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,13 @@
 		A27B100F191A9C5A00B6966D /* BezierPath */ = {
 			isa = PBXGroup;
 			children = (
+				A27B103E191A9CA200B6966D /* RITBezierPathView.h */,
+				A27B103F191A9CA200B6966D /* RITBezierPathView.m */,
 				A27B1018191A9C5A00B6966D /* RITAppDelegate.h */,
 				A27B1019191A9C5A00B6966D /* RITAppDelegate.m */,
-				A27B101B191A9C5A00B6966D /* Main.storyboard */,
 				A27B101E191A9C5A00B6966D /* RITViewController.h */,
 				A27B101F191A9C5A00B6966D /* RITViewController.m */,
+				A27B101B191A9C5A00B6966D /* Main.storyboard */,
 				A27B1021191A9C5A00B6966D /* Images.xcassets */,
 				A27B1010191A9C5A00B6966D /* Supporting Files */,
 			);
@@ -252,6 +257,7 @@
 			files = (
 				A27B101A191A9C5A00B6966D /* RITAppDelegate.m in Sources */,
 				A27B1016191A9C5A00B6966D /* main.m in Sources */,
+				A27B1040191A9CA200B6966D /* RITBezierPathView.m in Sources */,
 				A27B1020191A9C5A00B6966D /* RITViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
